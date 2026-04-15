@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>16번 — Social Evidence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero">
+  <div class="hero__big-number">16</div>
+  <div class="hero__glow"></div>
+  <div class="hero__content">
+    <p class="hero__tag hero-anim d1">2023년 3월 고1 모의고사 — 영어 16번</p>
+    <h1 class="hero__title hero-anim d2">Social<br><span>Evidence</span></h1>
+    <p class="hero__sub hero-anim d3">
+      다른 사람의 행동이 곧 신뢰의 근거가 된다
+      <small>— 사회적 증거의 심리학</small>
+    </p>
+  </div>
+  <div class="hero__scroll hero-anim d4">
+    <span>Scroll</span>
+    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+    </svg>
+  </div>
+</section>
+
+<!-- ═══════════ TABLE OF CONTENTS ═══════════ -->
+<section class="toc" id="toc">
+  <h2 class="toc__heading reveal">Contents</h2>
+
+  <a href="#vocabulary" class="toc__item reveal stagger-1">
+    <span class="toc__num">01</span>
+    <span class="toc__title">단어</span>
+    <span class="toc__sub">Vocabulary</span>
+    <svg class="toc__arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+  </a>
+  <a href="#answer" class="toc__item reveal stagger-2">
+    <span class="toc__num">02</span>
+    <span class="toc__title">정답</span>
+    <span class="toc__sub">Answer</span>
+    <svg class="toc__arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+  </a>
+  <a href="#sentences" class="toc__item reveal stagger-3">
+    <span class="toc__num">03</span>
+    <span class="toc__title">주요 문장</span>
+    <span class="toc__sub">Key Sentences</span>
+    <svg class="toc__arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+  </a>
+  <a href="#flow" class="toc__item reveal stagger-4">
+    <span class="toc__num">04</span>
+    <span class="toc__title">글의 흐름 · 요지</span>
+    <span class="toc__sub">Flow &amp; Main Idea</span>
+    <svg class="toc__arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+  </a>
+  <a href="#background" class="toc__item reveal stagger-5">
+    <span class="toc__num">05</span>
+    <span class="toc__title">배경지식</span>
+    <span class="toc__sub">Background</span>
+    <svg class="toc__arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+  </a>
+</section>
+
+<!-- ═══════════ VOCABULARY ═══════════ -->
+<section class="vocab" id="vocabulary">
+  <div class="section-header">
+    <span class="section-header__num reveal">01</span>
+    <h2 class="section-header__title reveal stagger-1">단어</h2>
+    <span class="section-header__sub reveal stagger-2">Vocabulary</span>
+  </div>
+  <div id="vocab-list"></div>
+</section>
+
+<!-- ═══════════ PLACEHOLDERS ═══════════ -->
+<!-- ═══════════ ANSWER ═══════════ -->
+<section class="answer" id="answer">
+  <div class="section-header">
+    <span class="section-header__num reveal">02</span>
+    <h2 class="section-header__title reveal stagger-1">정답</h2>
+    <span class="section-header__sub reveal stagger-2">Answer</span>
+  </div>
+
+  <!-- 빈칸 문장 -->
+  <div class="answer__card reveal stagger-3">
+    <p class="answer__hint">빈칸을 눌러 정답을 확인하세요</p>
+    <p class="answer__summary">
+      &ldquo;We tend to feel safe and secure in
+      <span class="answer__blank" id="blank-a" data-answer="numbers">(A)</span>
+      when we decide how to act, particularly when faced with
+      <span class="answer__blank" id="blank-b" data-answer="uncertain">(B)</span>
+      conditions.&rdquo;
+    </p>
+  </div>
+
+  <!-- 해설 3단계 -->
+  <div class="answer__steps">
+
+    <div class="answer__step reveal stagger-5">
+      <div class="answer__step-header">
+        <span class="answer__step-num">01</span>
+        <h3 class="answer__step-title">문맥 분석</h3>
+      </div>
+      <div class="answer__step-body">
+        <p>
+          지문의 핵심 주장은 <em>"there is safety in numbers"</em>(다수 속에 안전이 있다)입니다.
+          사람들은 어떤 행동을 할지 결정할 때, 다른 사람들이 이미 하고 있는 행동을 따라하면 안전하다고 느낍니다.
+          따라서 (A)에는 <em>numbers</em>(다수)가 들어가야 합니다.
+        </p>
+      </div>
+    </div>
+
+    <div class="answer__step reveal stagger-6">
+      <div class="answer__step-header">
+        <span class="answer__step-num">02</span>
+        <h3 class="answer__step-title">핵심 근거</h3>
+      </div>
+      <div class="answer__step-body">
+        <p>
+          지문에서 사회적 증거(social evidence)가 특히 강력하게 작동하는 조건을 명시합니다:
+        </p>
+        <blockquote>
+          &ldquo;Social proof is <strong>most influential</strong> under two conditions: <strong>uncertainty</strong> and similarity.&rdquo;
+        </blockquote>
+        <p>
+          <em>불확실한(uncertain)</em> 상황일수록 우리는 스스로 판단하기 어렵기 때문에
+          다른 사람들의 행동을 참고하게 됩니다.
+          따라서 (B)에는 <em>uncertain</em>이 들어가야 합니다.
+        </p>
+      </div>
+    </div>
+
+    <div class="answer__step reveal stagger-7">
+      <div class="answer__step-header">
+        <span class="answer__step-num">03</span>
+        <h3 class="answer__step-title">오답 소거</h3>
+      </div>
+      <div class="answer__step-body">
+        <div class="answer__elim">
+          <div class="answer__elim-row wrong">
+            <span class="answer__elim-num">&#9313;</span>
+            <span>numbers &mdash; <s>unrealistic</s></span>
+            <span class="answer__elim-reason">비현실적? 지문에 해당 맥락 없음</span>
+          </div>
+          <div class="answer__elim-row wrong">
+            <span class="answer__elim-num">&#9314;</span>
+            <span>experiences &mdash; <s>unrealistic</s></span>
+            <span class="answer__elim-reason">경험 속 안전감은 지문의 논지와 무관</span>
+          </div>
+          <div class="answer__elim-row wrong">
+            <span class="answer__elim-num">&#9315;</span>
+            <span>rules &mdash; <s>uncertain</s></span>
+            <span class="answer__elim-reason">규칙이 아닌 &lsquo;숫자(다수)&rsquo;가 핵심</span>
+          </div>
+          <div class="answer__elim-row wrong">
+            <span class="answer__elim-num">&#9316;</span>
+            <span>rules &mdash; <s>unpleasant</s></span>
+            <span class="answer__elim-reason">불쾌한 조건은 지문에 언급되지 않음</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ═══════════ KEY SENTENCES ═══════════ -->
+<section class="sentences" id="sentences">
+  <div class="section-header">
+    <span class="section-header__num reveal">03</span>
+    <h2 class="section-header__title reveal stagger-1">주요 문장</h2>
+    <span class="section-header__sub reveal stagger-2">Key Sentences</span>
+  </div>
+
+  <!-- Sentence Card -->
+  <div class="sent reveal stagger-3">
+    <div class="sent__card">
+      <p class="sent__text" id="sent-text"><span class="sent__ph sent__ph--adv" data-tag="부사구 (전치사구)" style="--i:0">From an evolutionary view</span>, <span class="sent__ph sent__ph--subj" data-tag="주어 (동명사구)" style="--i:1">following the group</span> <span class="sent__ph sent__ph--verb" data-tag="동사" style="--i:2">is</span> <span class="sent__ph sent__ph--freq" data-tag="빈도부사" style="--i:3">almost always</span> <span class="sent__ph sent__ph--comp" data-tag="보어 (형용사)" style="--i:4">positive</span> <span class="sent__ph sent__ph--adv2" data-tag="부사구 (전치사구)" style="--i:5">for our prospects of survival</span>.</p>
+
+    </div>
+
+    <!-- Translation -->
+    <div class="sent__translation reveal stagger-4">
+      <div class="sent__trans-item">
+        <span class="sent__trans-label">직역</span>
+        <p>진화의 관점에서 볼 때, 집단을 따르는 것은 거의 항상 우리의 생존 전망에 긍정적이다.</p>
+      </div>
+      <div class="sent__trans-item">
+        <span class="sent__trans-label">의역</span>
+        <p>진화적으로 보면, 무리를 따르는 건 생존에 거의 항상 유리하다.</p>
+      </div>
+    </div>
+
+    <!-- Grammar Points -->
+    <div class="sent__grammar reveal stagger-5">
+      <h3 class="sent__grammar-title">문법 포인트</h3>
+      <div class="sent__grammar-items">
+        <div class="sent__grammar-item">
+          <span class="sent__grammar-label">동명사 주어</span>
+          <p><em>following the group</em> → 단수 취급 → <em>is</em></p>
+        </div>
+        <div class="sent__grammar-item">
+          <span class="sent__grammar-label">전치사구 부사적 용법</span>
+          <p><em>From an evolutionary view</em></p>
+        </div>
+        <div class="sent__grammar-item">
+          <span class="sent__grammar-label">빈도부사 위치</span>
+          <p><em>almost always</em> → be동사 앞</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ═══════════ FLOW & MAIN IDEA ═══════════ -->
+<section class="flow" id="flow">
+  <div class="section-header">
+    <span class="section-header__num reveal">04</span>
+    <h2 class="section-header__title reveal stagger-1">글의 흐름 · 요지</h2>
+    <span class="section-header__sub reveal stagger-2">Flow &amp; Main Idea</span>
+  </div>
+
+  <div class="flow__timeline reveal stagger-3" id="flow-timeline">
+
+    <div class="flow__step" data-step="1">
+      <div class="flow__step-marker">
+        <span class="flow__step-num">01</span>
+        <div class="flow__step-dot"></div>
+        <span class="flow__step-line"></span>
+      </div>
+      <div class="flow__step-content">
+        <span class="flow__step-label">도입</span>
+        <h3 class="flow__step-title">사회적 증거 개념 제시</h3>
+        <p class="flow__step-desc">문장 01 — 다른 사람들이 하는 행동을 보고 자신의 행동을 결정하는 경향, 즉 <em>사회적 증거(social evidence)</em> 개념을 소개합니다.</p>
+      </div>
+    </div>
+
+    <div class="flow__step" data-step="2">
+      <div class="flow__step-marker">
+        <span class="flow__step-num">02</span>
+        <div class="flow__step-dot"></div>
+        <span class="flow__step-line"></span>
+      </div>
+      <div class="flow__step-content">
+        <span class="flow__step-label">근거</span>
+        <h3 class="flow__step-title">진화적 관점에서 집단 행동의 이점</h3>
+        <p class="flow__step-desc">문장 02 — 진화의 관점에서 볼 때, 집단을 따르는 것은 <em>생존에 거의 항상 유리</em>하다는 근거를 제시합니다.</p>
+      </div>
+    </div>
+
+    <div class="flow__step" data-step="3">
+      <div class="flow__step-marker">
+        <span class="flow__step-num">03</span>
+        <div class="flow__step-dot"></div>
+        <span class="flow__step-line"></span>
+      </div>
+      <div class="flow__step-content">
+        <span class="flow__step-label">권위자 인용</span>
+        <h3 class="flow__step-title">Robert Cialdini의 설명</h3>
+        <p class="flow__step-desc">문장 03 — 심리학자 <em>Robert Cialdini</em>가 사회적 증거의 작동 원리를 설명하며, 불확실성과 유사성이라는 두 조건을 제시합니다.</p>
+      </div>
+    </div>
+
+    <div class="flow__step" data-step="4">
+      <div class="flow__step-marker">
+        <span class="flow__step-num">04</span>
+        <div class="flow__step-dot"></div>
+        <span class="flow__step-line"></span>
+      </div>
+      <div class="flow__step-content">
+        <span class="flow__step-label">구체적 예시</span>
+        <h3 class="flow__step-title">상품평 · 식당 줄 사례</h3>
+        <p class="flow__step-desc">문장 04~07 — 인터넷 <em>상품평(product reviews)</em>을 참고하는 행동, 줄이 긴 <em>식당(restaurant)</em>에 끌리는 현상 등 일상적 사례를 통해 사회적 증거를 구체화합니다.</p>
+      </div>
+    </div>
+
+    <div class="flow__step" data-step="5">
+      <div class="flow__step-marker">
+        <span class="flow__step-num">05</span>
+        <div class="flow__step-dot"></div>
+      </div>
+      <div class="flow__step-content">
+        <span class="flow__step-label flow__step-label--conclusion">결론 · 주제문</span>
+        <h3 class="flow__step-title">주변 사람들의 행동을 따르는 것이 좋다</h3>
+        <p class="flow__step-desc">문장 08 — 다수 속에 안전이 있으므로, 특히 <em>불확실한 상황</em>에서 주변 사람들의 행동을 따르는 것이 합리적이라는 결론을 내립니다.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="flow__next-btn reveal stagger-4" id="flow-next-btn">
+    <span class="flow__next-label">다음 단계</span>
+    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+  </button>
+
+  <!-- 요지 -->
+  <div class="flow__gist" id="flow-gist">
+    <div class="flow__gist-card">
+      <span class="flow__gist-tag">요지 · Main Idea</span>
+      <p class="flow__gist-text">불확실한 상황에서 다수의 행동<small>(사회적 증거)</small>을 따르는 것이 안전하고 합리적이다.</p>
+    </div>
+  </div>
+
+</section>
+<section class="placeholder" id="background">
+  <span class="placeholder__num">05</span>
+  <h2 class="placeholder__title">배경지식</h2>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
