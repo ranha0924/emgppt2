@@ -305,9 +305,87 @@
   </div>
 
 </section>
-<section class="placeholder" id="background">
-  <span class="placeholder__num">05</span>
-  <h2 class="placeholder__title">배경지식</h2>
+<!-- ═══════════ BACKGROUND ═══════════ -->
+<section class="bg" id="background">
+  <div class="section-header">
+    <span class="section-header__num reveal">05</span>
+    <h2 class="section-header__title reveal stagger-1">배경지식</h2>
+    <span class="section-header__sub reveal stagger-2">Background</span>
+  </div>
+
+  <!-- Intro -->
+  <div class="bg__intro reveal stagger-3">
+    <span class="bg__intro-tag">1969 · Stanley Milgram</span>
+    <h3 class="bg__intro-title">&ldquo;하늘 쳐다보기&rdquo; 실험</h3>
+    <p class="bg__intro-desc">
+      뉴욕 거리 한복판. <em>몇 명이</em> 하늘을 쳐다보면<br>
+      지나가던 행인들도 <em>따라 볼까?</em>
+    </p>
+  </div>
+
+  <!-- Interactive Stage -->
+  <div class="bg__stage reveal stagger-4">
+    <!-- Sky -->
+    <div class="bg__sky">
+      <div class="bg__sky-target">
+        <span class="bg__sky-q">?</span>
+        <div class="bg__sky-pulse"></div>
+      </div>
+    </div>
+
+    <!-- Street with people -->
+    <div class="bg__street">
+      <div class="bg__people" id="bg-people"></div>
+      <div class="bg__pavement"></div>
+    </div>
+
+    <!-- Step indicator overlay -->
+    <div class="bg__indicator">
+      <span class="bg__indicator-num" id="bg-count">0</span>
+      <span class="bg__indicator-label">명이 하늘을 쳐다봄</span>
+    </div>
+  </div>
+
+  <!-- Stats panel -->
+  <div class="bg__stats reveal stagger-5">
+    <div class="bg__stat bg__stat--main">
+      <div class="bg__stat-head">
+        <span class="bg__stat-label">걸음 멈추고 따라본 행인</span>
+        <span class="bg__stat-value"><span id="bg-val-stop">0</span><small>%</small></span>
+      </div>
+      <div class="bg__stat-bar">
+        <div class="bg__stat-fill bg__stat-fill--main" id="bg-fill-stop"></div>
+      </div>
+    </div>
+
+    <div class="bg__stat bg__stat--sub">
+      <div class="bg__stat-head">
+        <span class="bg__stat-label">고개 들어 따라본 행인</span>
+        <span class="bg__stat-value"><span id="bg-val-gaze">0</span><small>%</small></span>
+      </div>
+      <div class="bg__stat-bar">
+        <div class="bg__stat-fill bg__stat-fill--sub" id="bg-fill-gaze"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Next button -->
+  <button class="bg__next-btn" id="bg-next-btn">
+    <span class="bg__next-label" id="bg-next-label">실험 시작</span>
+    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+  </button>
+
+  <!-- Conclusion -->
+  <div class="bg__conclusion" id="bg-conclusion">
+    <div class="bg__conclusion-card">
+      <span class="bg__conclusion-tag">So... · 그래서</span>
+      <p class="bg__conclusion-text">
+        한 명만 더 있어도, 우리는 <em>따라가요.</em><br>
+        <small>&mdash; 별점, 줄 선 식당, 베스트셀러도 모두 같은 원리.</small>
+      </p>
+      <p class="bg__conclusion-link">이게 바로 우리가 배운 <strong>Social Evidence</strong>.</p>
+    </div>
+  </div>
 </section>
 
 <script src="script.js"></script>
