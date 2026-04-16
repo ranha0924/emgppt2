@@ -71,7 +71,7 @@ WORDS.forEach((w, i) => {
 
 /* ═══ KEY SENTENCE DECOMPOSE ═══ */
 (function () {
-  document.querySelectorAll("#sent-text, #answer-sent-text").forEach((text) => {
+  document.querySelectorAll("#sent-text").forEach((text) => {
     text.addEventListener("click", () => {
       text.classList.toggle("highlighted");
     });
