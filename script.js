@@ -125,6 +125,125 @@ WORDS.forEach((w, i) => {
   });
 })();
 
+/* ═══ BACKGROUND — Milgram Sky-Looking Stage ═══ */
+(function () {
+  const stage = document.getElementById("bg-people");
+  const btn = document.getElementById("bg-next-btn");
+  const btnLabel = document.getElementById("bg-next-label");
+  const countEl = document.getElementById("bg-count");
+  const valStop = document.getElementById("bg-val-stop");
+  const valGaze = document.getElementById("bg-val-gaze");
+  const fillStop = document.getElementById("bg-fill-stop");
+  const fillGaze = document.getElementById("bg-fill-gaze");
+  const conclusion = document.getElementById("bg-conclusion");
+  if (!stage || !btn) return;
+
+  // Stages — Milgram (1969) actual data points
+  // count = number of "stimulus" people looking up
+  // stop  = % of passersby who STOPPED to look up
+  // gaze  = % of passersby who at least GLANCED up
+  const STAGES = [
+    { count: 1,  stop: 4,  gaze: 42, label: "다음 — 5명으로" },
+    { count: 5,  stop: 16, gaze: 80, label: "다음 — 15명으로" },
+    { count: 15, stop: 40, gaze: 86, label: "결과 보기" },
+  ];
+
+  // SVG silhouette of a person (looking up = head tilted up)
+  function personSVG(lookingUp) {
+    if (lookingUp) {
+      // Head tilted slightly back, body upright
+      return `
+        <svg class="bg__person bg__person--up" viewBox="0 0 22 50" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="7" r="5"/>
+          <line x1="11" y1="12" x2="11" y2="32" stroke-width="2.5" stroke-linecap="round"/>
+          <line x1="11" y1="18" x2="4"  y2="24" stroke-width="2" stroke-linecap="round"/>
+          <line x1="11" y1="18" x2="18" y2="24" stroke-width="2" stroke-linecap="round"/>
+          <line x1="11" y1="32" x2="6"  y2="46" stroke-width="2" stroke-linecap="round"/>
+          <line x1="11" y1="32" x2="16" y2="46" stroke-width="2" stroke-linecap="round"/>
+        </svg>`;
+    }
+    // Regular passerby
+    return `
+      <svg class="bg__person" viewBox="0 0 22 50" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="11" cy="9" r="4.5"/>
+        <line x1="11" y1="13" x2="11" y2="32" stroke-width="2" stroke-linecap="round"/>
+        <line x1="11" y1="20" x2="5"  y2="28" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="11" y1="20" x2="17" y2="28" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="11" y1="32" x2="6"  y2="46" stroke-width="1.8" stroke-linecap="round"/>
+        <line x1="11" y1="32" x2="16" y2="46" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>`;
+  }
+
+  // Render the people: stimuli (lookers) interspersed with regular passersby
+  function renderStage(stimuliCount) {
+    stage.innerHTML = "";
+    // Total figures on screen — passersby fill the scene
+    const totalPassersby = Math.max(0, 14 - stimuliCount);
+    const totalFigures = stimuliCount + totalPassersby;
+
+    // Position lookers spread across the row
+    const positions = new Set();
+    if (stimuliCount > 0) {
+      const step = totalFigures / stimuliCount;
+      for (let i = 0; i < stimuliCount; i++) {
+        positions.add(Math.floor(i * step + step / 2));
+      }
+    }
+
+    for (let i = 0; i < totalFigures; i++) {
+      const wrapper = document.createElement("span");
+      wrapper.style.animationDelay = (i * 40) + "ms";
+      wrapper.innerHTML = positions.has(i) ? personSVG(true) : personSVG(false);
+      const svg = wrapper.firstElementChild;
+      svg.style.animationDelay = (i * 40) + "ms";
+      stage.appendChild(svg);
+    }
+  }
+
+  // Animate a number from current to target
+  function animateNumber(el, from, to, duration) {
+    const start = performance.now();
+    function tick(now) {
+      const t = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - t, 3);
+      el.textContent = Math.round(from + (to - from) * eased);
+      if (t < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  let stageIdx = -1;
+  let prevStop = 0;
+  let prevGaze = 0;
+
+  btn.addEventListener("click", () => {
+    stageIdx++;
+    if (stageIdx >= STAGES.length) {
+      // Show conclusion
+      btn.classList.add("done");
+      setTimeout(() => conclusion && conclusion.classList.add("visible"), 300);
+      return;
+    }
+
+    const s = STAGES[stageIdx];
+    renderStage(s.count);
+    countEl.textContent = s.count;
+    fillStop.style.width = s.stop + "%";
+    fillGaze.style.width = s.gaze + "%";
+    animateNumber(valStop, prevStop, s.stop, 1100);
+    animateNumber(valGaze, prevGaze, s.gaze, 1100);
+    prevStop = s.stop;
+    prevGaze = s.gaze;
+
+    // Update button label for next click
+    if (stageIdx < STAGES.length - 1) {
+      btnLabel.textContent = s.label;
+    } else {
+      btnLabel.textContent = s.label;
+    }
+  });
+})();
+
 /* ═══ SCROLL REVEAL OBSERVER ═══ */
 const observer = new IntersectionObserver(
   (entries) => {
