@@ -135,6 +135,8 @@ WORDS.forEach((w, i) => {
   const valGaze = document.getElementById("bg-val-gaze");
   const fillStop = document.getElementById("bg-fill-stop");
   const fillGaze = document.getElementById("bg-fill-gaze");
+  const detailStop = document.getElementById("bg-detail-stop");
+  const detailGaze = document.getElementById("bg-detail-gaze");
   const conclusion = document.getElementById("bg-conclusion");
   if (!stage || !btn) return;
 
@@ -232,6 +234,8 @@ WORDS.forEach((w, i) => {
     fillGaze.style.width = s.gaze + "%";
     animateNumber(valStop, prevStop, s.stop, 1100);
     animateNumber(valGaze, prevGaze, s.gaze, 1100);
+    if (detailStop) detailStop.textContent = "→ 행인 100명 중 " + s.stop + "명이 멈춰서 따라봄";
+    if (detailGaze) detailGaze.textContent = "→ 행인 100명 중 " + s.gaze + "명이 고개를 들어 따라봄";
     prevStop = s.stop;
     prevGaze = s.gaze;
 

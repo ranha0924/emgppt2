@@ -1117,6 +1117,16 @@ a { color: inherit; text-decoration: none; }
 .bg__stat-fill--sub {
   background: linear-gradient(90deg, rgba(96,165,250,0.6), rgba(96,165,250,0.85));
 }
+.bg__stat-detail {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: clamp(0.75rem, 1vw, 0.85rem);
+  color: rgba(168,162,158,0.55);
+  letter-spacing: 0.02em;
+  min-height: 1.2em;
+  transition: opacity 0.4s ease;
+}
 
 /* Next button (reuses flow style) */
 .bg__next-btn {
