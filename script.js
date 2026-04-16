@@ -64,6 +64,8 @@ WORDS.forEach((w, i) => {
       revealedCount++;
       if (revealedCount >= blanks.length) {
         if (hint) hint.classList.add("hidden");
+        const trans = document.getElementById("answer-translation");
+        if (trans) setTimeout(() => trans.classList.add("visible"), 500);
       }
     });
   });
