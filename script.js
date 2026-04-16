@@ -4,7 +4,7 @@ const WORDS = [
   { word: "trustworthy", meaning: "신뢰할만한", syn: "reliable, dependable", ant: "unreliable, untrustworthy" },
   { word: "trust", meaning: "신뢰 (n.)", syn: "confidence, faith", ant: "distrust, suspicion" },
   { word: "evidence", meaning: "증거", syn: "proof, indication", ant: "disproof, conjecture" },
-  { word: "evolutionary", meaning: "진화의", syn: "developmental, adaptive", ant: "regressive, static" },
+  { word: "evolutionary", meaning: "진화의", syn: "adaptive, progressive", ant: "regressive, static" },
   { word: "evolution", meaning: "진화 (n.)", syn: "development, progression", ant: "regression, devolution" },
   { word: "prospect", meaning: "전망, 가능성", syn: "outlook, possibility", ant: "hopelessness, impossibility" },
   { word: "sensible", meaning: "분별있는, 합리적인", syn: "reasonable, rational", ant: "foolish, irrational" },
@@ -240,11 +240,7 @@ WORDS.forEach((w, i) => {
     prevGaze = s.gaze;
 
     // Update button label for next click
-    if (stageIdx < STAGES.length - 1) {
-      btnLabel.textContent = s.label;
-    } else {
-      btnLabel.textContent = s.label;
-    }
+    btnLabel.textContent = s.label;
   });
 })();
 
