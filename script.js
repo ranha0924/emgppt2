@@ -71,13 +71,12 @@ WORDS.forEach((w, i) => {
 
 /* ═══ KEY SENTENCE DECOMPOSE ═══ */
 (function () {
-  const text = document.getElementById("sent-text");
-  if (!text) return;
-
-  text.addEventListener("click", () => {
-    text.classList.toggle("highlighted");
+  document.querySelectorAll("#sent-text, #answer-sent-text").forEach((text) => {
+    text.addEventListener("click", () => {
+      text.classList.toggle("highlighted");
+    });
+    text.style.cursor = "pointer";
   });
-  text.style.cursor = "pointer";
 })();
 
 /* ═══ FLOW STEPS ═══ */
