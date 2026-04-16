@@ -1187,30 +1187,32 @@ a { color: inherit; text-decoration: none; }
 .bg__conclusion-text {
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: clamp(1.2rem, 2vw, 1.5rem);
-  line-height: 1.7;
+  font-size: clamp(1.15rem, 1.9vw, 1.4rem);
+  line-height: 1.6;
   color: var(--text);
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.6rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid rgba(245,158,11,0.15);
 }
 .bg__conclusion-text em {
   color: var(--accent);
   font-style: normal;
 }
-.bg__conclusion-text small {
-  display: block;
-  margin-top: 0.7rem;
-  font-size: 0.7em;
-  font-weight: 500;
-  color: var(--text-sec);
-}
 .bg__conclusion-link {
   font-family: var(--font-body);
-  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  font-size: clamp(0.92rem, 1.2vw, 1.02rem);
+  line-height: 1.85;
   color: var(--text-sec);
+  text-align: left;
 }
 .bg__conclusion-link strong {
-  color: var(--accent);
+  color: var(--text);
   font-weight: 700;
+}
+.bg__conclusion-link em {
+  color: var(--accent);
+  font-style: normal;
+  font-weight: 600;
 }
 
 /* ═══ MEDIA: bigger text for TV ═══ */
